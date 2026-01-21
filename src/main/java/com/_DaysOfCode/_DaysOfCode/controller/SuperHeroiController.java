@@ -22,6 +22,12 @@ public class SuperHeroiController {
         return superHeroiRepository.findAll();
     }
 
+    // GET - Buscar super-heróis por poderes
+    @GetMapping("/buscar") // Mapeia GET para /api/super-herois/buscar?poder=voo
+    public List<SuperHeroi> buscarPorPoderes(@RequestParam String poder) {
+        return superHeroiRepository.buscarPorPoderes(poder);
+    }
+
     // GET - Buscar super-herói por ID
     @GetMapping("/{id}") // Mapeia GET para /api/super-herois/{id}
     public ResponseEntity<SuperHeroi> buscarPorId(@PathVariable Long id) {
