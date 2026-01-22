@@ -2,6 +2,7 @@ package com._DaysOfCode._DaysOfCode.controller;
 
 import com._DaysOfCode._DaysOfCode.model.SuperHeroi;
 import com._DaysOfCode._DaysOfCode.repository.SuperHeroiRepository;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -42,13 +43,13 @@ public class SuperHeroiController {
 
     // POST - Criar novo super-herói
     @PostMapping // Mapeia requisições POST para /api/super-herois
-    public SuperHeroi criar(@RequestBody SuperHeroi superHeroi) {
+    public SuperHeroi criar(@Valid @RequestBody SuperHeroi superHeroi) {
         return superHeroiRepository.save(superHeroi);
     }
 
     // PUT - Atualizar super-herói existente
     @PutMapping("/{id}") // Mapeia PUT para /api/super-herois/{id}
-    public ResponseEntity<SuperHeroi> atualizar(@PathVariable Long id, @RequestBody SuperHeroi superHeroiAtualizado) {
+    public ResponseEntity<SuperHeroi> atualizar(@PathVariable Long id, @Valid @RequestBody SuperHeroi superHeroiAtualizado) {
         Optional<SuperHeroi> superHeroiExistente = superHeroiRepository.findById(id);
         
         if (superHeroiExistente.isPresent()) {

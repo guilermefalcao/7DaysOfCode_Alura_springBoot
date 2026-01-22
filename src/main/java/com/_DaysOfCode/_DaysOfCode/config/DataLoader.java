@@ -25,6 +25,7 @@ public class DataLoader implements CommandLineRunner {
         SuperHeroi superman = new SuperHeroi();
         superman.setNome("Superman");
         superman.setPoderes("Voo, super força, visão de raio-x, super velocidade, invulnerabilidade");
+        superman.setIdentidadeSecreta("Clark Kent");
         superman.setOrigem("Krypton");
         superman.setUniverso("DC Comics");
         superman.setNivelForca(10);
@@ -34,6 +35,7 @@ public class DataLoader implements CommandLineRunner {
         SuperHeroi homemAranha = new SuperHeroi();
         homemAranha.setNome("Homem-Aranha");
         homemAranha.setPoderes("Agilidade sobre-humana, força proporcional de aranha, sentido aranha, teia");
+        homemAranha.setIdentidadeSecreta("Peter Parker");
         homemAranha.setOrigem("Terra - Nova York");
         homemAranha.setUniverso("Marvel Comics");
         homemAranha.setNivelForca(7);
@@ -43,6 +45,7 @@ public class DataLoader implements CommandLineRunner {
         SuperHeroi mulherMaravilha = new SuperHeroi();
         mulherMaravilha.setNome("Mulher Maravilha");
         mulherMaravilha.setPoderes("Super força, voo, laço da verdade, bracelete indestrutível");
+        mulherMaravilha.setIdentidadeSecreta("Diana Prince");
         mulherMaravilha.setOrigem("Themyscira");
         mulherMaravilha.setUniverso("DC Comics");
         mulherMaravilha.setNivelForca(9);
@@ -52,6 +55,7 @@ public class DataLoader implements CommandLineRunner {
         SuperHeroi homemDeFerro = new SuperHeroi();
         homemDeFerro.setNome("Homem de Ferro");
         homemDeFerro.setPoderes("Armadura tecnológica, voo, repulsores, inteligência genial");
+        homemDeFerro.setIdentidadeSecreta("Tony Stark");
         homemDeFerro.setOrigem("Terra - Estados Unidos");
         homemDeFerro.setUniverso("Marvel Comics");
         homemDeFerro.setNivelForca(8);
