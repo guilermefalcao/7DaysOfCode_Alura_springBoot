@@ -1,4 +1,4 @@
-# 🦸‍♂️ API de Super-Heróis - #7DaysOfCode
+# 🦸♂️ API de Super-Heróis - #7DaysOfCode
 
 Projeto desenvolvido durante o desafio **#7DaysOfCode** da Alura para criar uma API REST completa de gerenciamento de super-heróis usando Spring Boot.
 
@@ -8,6 +8,7 @@ Projeto desenvolvido durante o desafio **#7DaysOfCode** da Alura para criar uma 
 - **Spring Boot 4.0.1**
 - **Spring Data JPA**
 - **Spring Validation**
+- **SpringDoc OpenAPI (Swagger)**
 - **H2 Database** (banco em memória)
 - **Lombok**
 - **Maven**
@@ -42,6 +43,11 @@ Projeto desenvolvido durante o desafio **#7DaysOfCode** da Alura para criar uma 
 - Tratamento global de exceções
 - Respostas de erro amigáveis
 
+**Dia 7**: Documentação Swagger
+- Documentação interativa da API
+- Interface Swagger UI
+- Especificação OpenAPI
+
 ## 🛠️ Como Executar
 
 ### Pré-requisitos
@@ -61,6 +67,12 @@ mvn spring-boot:run
 ```
 
 A aplicação estará disponível em: `http://localhost:8080`
+
+## 📚 Documentação Swagger
+
+Acesse a documentação interativa da API:
+- **Swagger UI**: `http://localhost:8080/swagger-ui/index.html`
+- **OpenAPI JSON**: `http://localhost:8080/v3/api-docs`
 
 ## 📊 H2 Console
 
@@ -103,9 +115,17 @@ Acesse o banco de dados em: `http://localhost:8080/h2-console`
 - **identidadeSecreta**: Obrigatório, 2-100 caracteres
 - **nivelForca**: Entre 1 e 10
 
-## 🧪 Testando com Postman
+## 🧪 Testando a API
 
-1. Importe a collection ou crie requests manualmente
+### 1. Via Swagger UI (Recomendado)
+1. Acesse `http://localhost:8080/swagger-ui/index.html`
+2. Clique em um endpoint
+3. Clique em "Try it out"
+4. Preencha os dados
+5. Clique em "Execute"
+
+### 2. Via Postman
+1. Importe a collection: `http://localhost:8080/v3/api-docs`
 2. Use `Content-Type: application/json` para POST/PUT
 3. Teste validações enviando dados inválidos
 
@@ -120,19 +140,22 @@ Acesse o banco de dados em: `http://localhost:8080/h2-console`
 
 ```
 src/main/java/com/_DaysOfCode/_DaysOfCode/
-├── config/          # Configurações e DataLoader
+├── config/          # Configurações (DataLoader, SwaggerConfig)
 ├── controller/      # Controllers REST
 ├── exception/       # Tratamento de exceções
 ├── model/          # Entidades JPA
 └── repository/     # Repositórios Spring Data
 ```
 
-## 🎯 Próximos Passos
+## 🎯 Funcionalidades Completas
 
-- [ ] Dia 7: Interface web ou documentação Swagger
-- [ ] Testes unitários
-- [ ] Deploy na nuvem
-- [ ] Autenticação JWT
+- ✅ CRUD completo de super-heróis
+- ✅ Busca por poderes (case-insensitive)
+- ✅ Validações com mensagens personalizadas
+- ✅ Tratamento global de exceções
+- ✅ Documentação Swagger interativa
+- ✅ Banco H2 em memória
+- ✅ Dados iniciais pré-carregados
 
 ---
 
